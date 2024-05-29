@@ -1,20 +1,14 @@
 import React from "react";
-import Stage from "../components/stage";
 import MainInfoForm from "../components/main-info-sign-in";
 
-class YourInfo extends React.Component
+function YourInfo({setName, setEmail, setPhoneNumber})
 {
-    render()
-    {
-        return(
-            <>
-                <Stage />
-                <MainInfoForm />
+    return(
+        <>
+            <MainInfoForm setName={setName} setEmail={setEmail} setPhoneNumber={setPhoneNumber}/>
                 
-            </>
-        );
-    }
-
+        </>
+    );
 }
 
 export default YourInfo;

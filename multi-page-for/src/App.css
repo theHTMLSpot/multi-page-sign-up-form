@@ -1,8 +1,24 @@
+:root {
+  --arine-blue: hsl(213, 96%, 18%);
+--Purplish-blue: hsl(243, 100%, 62%);
+--Pastel-blue: hsl(228, 100%, 84%);
+--Light-blue: hsl(206, 94%, 87%);
+--Strawberry-red: hsl(354, 84%, 57%);
+
+/* Neutral */
+
+--Cool-gray: hsl(231, 11%, 63%);
+--Light-gray: hsl(229, 24%, 87%);
+--Magnolia: hsl(217, 100%, 97%);
+--Alabaster: hsl(231, 100%, 99%);
+--White: hsl(0, 0%, 100%);
+}
+
 .App {
   text-align: center;
 }
 .App-header {
-  background-color: #cfe7f7;
+  background-color: var(--Magnolia);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -14,9 +30,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 25%;
-  background-color: #410096;
+  width: 45%;
+  background-image:  url(./bg-sidebar-desktop.svg);
   border-radius: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 .step
 {
@@ -28,14 +46,26 @@
 }
 .step-number
 {
-  background-color: #5ab8c9;;
+  border: 1px var(--Light-blue) solid;
   border-radius: 50%;
   line-height: 1.35em;
   width: 4vw;
   height: 4vw;
   font-size: larger;
   margin-right: 6%;
+  color: white;
 
+}
+#active-step-number
+{
+  background-color: var(--Light-blue);
+  border-radius: 50%;
+  line-height: 1.35em;
+  width: 4vw;
+  height: 4vw;
+  font-size: larger;
+  margin-right: 6%;
+  color: black;
 }
 .step-text {
   display: flex;
@@ -49,36 +79,45 @@
   color: white ;
 }
 .step-text p{
-  color: #720792;
+  color: var(--Pastel-blue);
   margin-bottom: 1%;
   text-align: left;
 
 }
 .form-background
 {
-  width: 50vw;
+  position: fixed;
+  width: 75vw;
   background-color: white;
   border-radius: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 75vh;
+  justify-content: space-around;
+  align-items: center;
+  height: 79vh;
+
+
 }
-.form-background h2{
-  margin-left: 15%;
-}
+
 .form-body
 {
   display: flex;
   flex-direction: column ;
   justify-content: flex-start;
   align-items: flex-start;
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-right: 15%;
+  color: var(--arine-blue);
+}
+.form-body h2{
+  justify-self: flex-start;
+  align-self: flex-start;
   margin-left: 15%;
+  color: var(--arine-blue);
 }
 .form-body label{
   margin-bottom: 4%;
-  color:#000b26;
+  color: var(--arine-blue);
 
 }
 .form-body input{
@@ -88,11 +127,11 @@
 }
 .submit
 {
-  justify-self: flex-end;
   align-self: flex-end;
-  margin-top: 20%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   width: 30%;
-  height: 15%;
+  height: 5vh;
   font-size: 0.6em;
   background-color:#000b26;
   border-radius: 7px;
