@@ -4,10 +4,11 @@ import MainInfoForm from "../components/main-info-sign-in";
 function YourInfo({setName, setEmail, setPhoneNumber})
 {
     return(
-        <>
-            <MainInfoForm setName={setName} setEmail={setEmail} setPhoneNumber={setPhoneNumber}/>
-                
-        </>
+        <div className="App">
+            <header className="App-header">
+                <MainInfoForm setName={setName} setEmail={setEmail} setPhoneNumber={setPhoneNumber}/>
+            </header> 
+        </div>
     );
 }
 
