@@ -357,3 +357,34 @@ input:checked + .slider:before {
 {
   margin-top: 0 !important;
 }
+
+.summary
+{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  align-items: flex-start;
+  width: 90%;
+  height: fit-content;
+  background-color: var(--Alabaster);
+  border: 2px var(--Marine-blue) solid;
+}
+.summary h5{
+  font-size: 1.2em;
+}
+.summary ul 
+{
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.summary ul li{
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+
+}

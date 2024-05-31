@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavigationProvider } from './components/navigation-context';
 import ProtectedRoute from './components/protected-route'; // Import the ProtectedRoute component
 import { useState } from 'react';
+import SummaryPage from './pages/summery';
 
 function App() {
   const [name, setName] = useState('');
@@ -21,11 +22,12 @@ function App() {
           <Route 
             path='/' 
             element={
-              <MainInfoForm 
+              <SummaryPage />
+              /*<MainInfoForm 
                 setName={setName} 
                 setEmail={setEmail} 
                 setPhoneNumber={setPhoneNumber} 
-              />
+              />*/
             } 
           />
           <Route 
@@ -61,7 +63,7 @@ function App() {
             element={
               <ProtectedRoute 
                 step={3} 
-                element={<div>Summary Page</div>} 
+                element={ <SummaryPage />} 
               />
             } 
           />
