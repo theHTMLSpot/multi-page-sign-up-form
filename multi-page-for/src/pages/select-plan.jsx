@@ -1,14 +1,12 @@
 import SelectPlan from "../components/select-plan-component";
 
-
-function SelectPlanPage()
-{
-    return(
+function SelectPlanPage({ setPlan, setMonthly }) {
+    return (
         <div className="App">
-              <header className="App-header">
-                    <SelectPlan/>
-               </header> 
-          </div>
+            <header className="App-header">
+                <SelectPlan setPlan1={setPlan} setMonthly1={setMonthly} />
+            </header>
+        </div>
     );
 }
 

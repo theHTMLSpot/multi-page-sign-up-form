@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { parsePhoneNumberFromString } from 'libphonenumber-js';
 import Stage from './stage';
+import { useNavigate } from 'react-router-dom';
 
 function MainInfoForm({ setName, setEmail, setPhoneNumber }) {   
     const [inputName, setInputName] = useState('');
     const [inputEmail, setInputEmail] = useState('');
     const [inputPhoneNumber, setInputPhoneNumber] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate(); // Use lowercase "navigate"
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -18,6 +20,7 @@ function MainInfoForm({ setName, setEmail, setPhoneNumber }) {
             setName(inputName);
             setEmail(inputEmail);
             setPhoneNumber(inputPhoneNumber);
+            navigate('/select-plan'); // Navigate to '/select-plan'
 
             alert(`Submitted: ${inputName}, ${inputEmail}, ${inputPhoneNumber}`);
         } else {
